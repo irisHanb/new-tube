@@ -9,3 +9,8 @@ This is clone project for studying.
 - [tailwindcss](https://tailwindcss.com/)
 - [shadcn ui](https://ui.shadcn.com/)
 - [clerk](https://clerk.com/): for auth
+
+### Tech> DB
+
+- [drizzle ORM](https://orm.drizzle.team/)
+- [neon](https://neon.com/)
