@@ -14,3 +14,8 @@ This is clone project for studying.
 
 - [drizzle ORM](https://orm.drizzle.team/)
 - [neon](https://neon.com/)
+- [ngrok](https://ngrok.com/): get static url for dev
+
+  - [Sync Clerk data to your app with webhooks](https://clerk.com/docs/webhooks/sync-data)
+
+- [concrrently](https://www.npmjs.com/package/concurrently): run script at multiple
