@@ -29,12 +29,18 @@ const t = initTRPC.context<Context>().create({
 // Base router and procedure helpers
 export const createTRPCRouter = t.router;
 export const createCallerFactory = t.createCallerFactory;
+
 export const baseProcedure = t.procedure;
+
 export const protectedProcedure = t.procedure.use(
   async function isAuthed(opts) {
     const { ctx } = opts;
+    console.log("===opts:", opts);
     if (!ctx.clerkUserId) {
-      throw new TRPCError({ code: "UNAUTHORIZED" });
+      throw new TRPCError({
+        code: "UNAUTHORIZED",
+        message: "ctx.clerkUserId is null",
+      });
     }
 
     const [user] = await db
@@ -44,8 +50,15 @@ export const protectedProcedure = t.procedure.use(
       .limit(1);
 
     if (!user) {
+      console.log("===== ", user);
       throw new TRPCError({ code: "UNAUTHORIZED" });
     }
+
+    // const { success } = await ratelimit.limit(user.id);
+    // if (!success)
+    //   throw new TRPCError({
+    //     code: "TOO_MANY_REQUESTS",
+    //   });
 
     return opts.next({
       ctx: {
