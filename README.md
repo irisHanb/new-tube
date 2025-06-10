@@ -19,3 +19,13 @@ This is clone project for studying.
   - [Sync Clerk data to your app with webhooks](https://clerk.com/docs/webhooks/sync-data)
 
 - [concrrently](https://www.npmjs.com/package/concurrently): run script at multiple
+
+- [upstash](https://upstash.com/)
+  - serverless data platform ( use for redis )
+  - [nextjs](https://github.com/upstash/ratelimit-js/tree/main/examples/nextjs)
+
+## pakages
+
+- superjson
+  - data 직렬화
+- react-error-boundary
