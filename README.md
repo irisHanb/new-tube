@@ -1,5 +1,12 @@
 This is clone project for studying.
 
+## What I learned
+
+- project structure
+  - app( 기본 routers ), modules( 기능단위 폴더 ) 의 구분
+  - server component 와 client component 의 구분과 구조
+- server prefetch, client side fetch
+
 ## Tech
 
 - [bun](https://bun.sh/)
